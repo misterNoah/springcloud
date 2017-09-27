@@ -65,4 +65,14 @@ public class User {
   public void setBalance(BigDecimal balance) {
     this.balance = balance;
   }
+
+	public User() {
+		super();
+	}
+	
+	public User(Long id, String username) {
+		super();
+		this.id = id;
+		this.username = username;
+	}
 }

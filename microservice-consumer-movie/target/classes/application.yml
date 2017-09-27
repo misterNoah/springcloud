@@ -1,4 +1,12 @@
 server:
   port: 7901
+spring:
+  application:
+    name: consumer-movie
 user: 
   userServicePath: http://localhost:7900/simple/
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:admin123@localhost:8761/eureka
