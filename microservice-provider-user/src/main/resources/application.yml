@@ -1,5 +1,5 @@
 server:
-  port: 7901
+  port: 7900
 spring:
   jpa:
     generate-ddl: false
@@ -27,3 +27,6 @@ eureka:
   instance:
     ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    metadata-map:
+      zone: aaa
+      jialiang: bbb
