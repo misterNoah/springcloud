@@ -30,3 +30,4 @@ eureka:
     metadata-map:
       zone: aaa
       jialiang: bbb
+    appname: USER-HAHA
