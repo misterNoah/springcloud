@@ -1,0 +1,20 @@
+
+server:
+  port: 8031
+  
+spring:
+  application:
+    name: hystrix-turbine
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:admin123@localhost:8761/eureka
+  instance:
+    ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+  
+turbine:
+  aggregator:
+    clusterConfig: CONSUMER-MOVIE-HYSTRIX
+  appConfig: consumer-movie-hystrix

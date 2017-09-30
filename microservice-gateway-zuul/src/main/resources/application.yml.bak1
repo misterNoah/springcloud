@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: gateway-zuul
+server:
+  port: 8040
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:admin123@localhost:8761/eureka
+  instance:
+    ip-address: true
+    
+zuul:
+  ignoredServices: '*'
+  routes:
+    provider-user: /user/**
